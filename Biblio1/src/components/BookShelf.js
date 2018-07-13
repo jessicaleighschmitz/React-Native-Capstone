@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, TouchableHighlight, Button, Text, Image, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
-import BookShelfItem from './BookShelfItem';
+import Footer from './Footer';
 
 class BookShelf extends React.Component {
   render() {
@@ -16,6 +16,7 @@ class BookShelf extends React.Component {
           title="Go back"
           onPress={() => this.props.navigation.goBack()}
         />
+        <Footer />
       </View>
     );
   }
