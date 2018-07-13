@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { StyleSheet, TouchableHighlight, Button, Text, Image, View } from 'react-native';
+import { createStackNavigator } from 'react-navigation';
 import BookShelfItem from './BookShelfItem';
 
-function BookShelf (){
-  return(
-    <View>
-      <Text>Bookshelf works.</Text>
-      <BookShelfItem />
-    </View>
-  );
+class BookShelf extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Bookshelf Screen</Text>
+        <Button
+          title="Go to Home"
+          onPress={() => this.props.navigation.navigate('Home')}
+        />
+        <Button
+          title="Go back"
+          onPress={() => this.props.navigation.goBack()}
+        />
+      </View>
+    );
+  }
 }
 
 export default BookShelf;
