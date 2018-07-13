@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
-import BookShelfItem from './components/BookShelfItem';
+import BookShelfItem from './BookShelfItem';
 
 function BookShelf (){
   return(
