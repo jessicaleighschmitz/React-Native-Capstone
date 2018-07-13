@@ -1,28 +1,27 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 import LandingPage from './components/LandingPage';
-// import BookShelf from './components/BookShelf';
-import {createStackNavigator, } from 'react-navigation';
+import Bookshelf from './components/BookShelf';
+import { StyleSheet, Text, View } from 'react-native';
+import { createStackNavigator } from 'react-navigation';
+import { Font } from 'expo';
 
+const RootStack = createStackNavigator(
+  {
+    Home: LandingPage,
+    Bookshelf: Bookshelf,
+  },
+  {
+    initialRouteName: 'Home',
+  }
+);
 
 export default class App extends React.Component {
+
   render() {
-    return <RootStack />
+    return <RootStack />;
   }
 }
 
 const styles = StyleSheet.create({
 
 });
-
-const RootStack = createStackNavigator({
-  Landing: LandingPage,
-  BookShelf: BookShelf,
- },
- {
-   initialRouteName: 'LandingPage',
- }
-);
-
-
-export default App;
